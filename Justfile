@@ -15,7 +15,7 @@ clean:
 clean:
     Remove-Item -Recurse -Force ./{{build_dir}}
 
-configure: 
+configure:
     cmake --toolchain {{toolchain_file}} {{triplet}}-G Ninja -B {{build_dir}} -S .
 
 build conf='Debug': configure
